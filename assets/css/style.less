@@ -82,6 +82,10 @@ a {
 	font-family: @brand-font !important;
 }
 
+img{
+	height: auto;
+}
+
 
 //***************** SHORTCUTS ******************//
 
@@ -290,7 +294,7 @@ header {
 
 	.del3 {
 		float: left;
-		margin-bottom: 80px;
+		margin-bottom: 170px;
 		h3 {
 			margin-top: 70px;
 			margin-bottom: 20px;
@@ -300,6 +304,67 @@ header {
 			margin-left: -51px;
 			margin-top: 48px;
 		}
+		.pipe1{
+			background: @color-lightBlue;
+			position: absolute;
+			margin-top: 285px;
+			margin-left: 218px;
+			width: 30px;
+			height: 100px;
+			z-index: -1;
+		}
+		.pipe2{
+			background: @color-lightBlue;
+			position: absolute;
+			margin-top: 385px;
+			margin-left: 218px;
+			width: 330px;
+			height: 30px;
+			z-index: -1;
+		}
+		.pipe3{
+			background: @color-lightBlue;
+			position: absolute;
+			margin-top: 385px;
+			margin-left: 548px;
+			width: 30px;
+			height: 100px;
+			z-index: -1;
+		}
 	}
 
+}
+
+.del4 {
+	float: left;
+	margin-bottom: 100px;
+	h3 {
+		margin-top: 30px;
+		margin-bottom: 20px;
+	}
+	.separation {
+		width: 600px;
+	}
+	.timmar{
+		display: block;
+		position: absolute;
+		margin-left: 300px;
+		margin-top: 110px;
+		font-size: 60pt !important;
+		line-height: 1.2 !important;
+		font-family: @brand-font !important;
+		font-weight: 300 !important;
+		color: @color-dark !important;
+	}
+	.pipe1{
+		background: @color-darkRed url(../img/sperma.png);
+		position: absolute;
+		margin-top: 285px;
+		margin-left: 218px;
+		width: 30px;
+		height: 100px;
+		z-index: -1;
+		-webkit-animation: redAnimation 20s infinite;
+		-webkit-animation-timing-function: linear;
+	}
 }
