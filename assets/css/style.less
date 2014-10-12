@@ -186,6 +186,7 @@ header {
 		border-radius: 50%;
 	}
 	.circle {
+		display: block;
 		background: @color-mediumBlue;
 		width: 80px;
 		height: 80px;
@@ -197,7 +198,7 @@ header {
 		border: #fff solid #fff;
 		&:hover {
 			.transition(all, 0.1s, ease-in);
-			background: #fff;
+			background: lighten(@brand-color, 10%);
 		}
 		.glyphicon {
 			.transition(all, 0.1s, ease-in);
@@ -240,8 +241,8 @@ header {
 			    from { background-position: 0 0; }
 			    to { background-position: -361px 0; }
 			}
-			animation: redAnimation 10s infinite;
-			-webkit-animation: redAnimation 10s infinite;
+			animation: redAnimation 20s infinite;
+			-webkit-animation: redAnimation 20s infinite;
     		-webkit-animation-timing-function: linear;
 		}
 		&.lightBlue {
@@ -251,7 +252,7 @@ header {
 
 	.del1 {
 		float: left;
-		margin-bottom: 50px;
+		margin-bottom: 80px;
 		h3 {
 			margin-top: 40px;
 			margin-bottom: 20px;
@@ -274,6 +275,20 @@ header {
 			width: 378px;
 			margin-left: -52px;
 			margin-top: 24px;
+		}
+	}
+
+	.del3 {
+		float: left;
+		margin-bottom: 80px;
+		h3 {
+			margin-top: 70px;
+			margin-bottom: 20px;
+		}
+		.kalvning {
+			width: 353px;
+			margin-left: -51px;
+			margin-top: 48px;
 		}
 	}
 
