@@ -12,10 +12,10 @@ git checkout gh-pages
 rm -rf assets/
 rm -rf index.html
 cd ..
-./node_modules/less/bin/lessc assets/css/style.less > gh-pages/assets/css/style.css
 cp -rf assets/ gh-pages/assets
 rm -r gh-pages/assets/css/*.less
 cp -rf index.html gh-pages
+./node_modules/less/bin/lessc assets/css/style.less > gh-pages/assets/css/style.css
 cd gh-pages
 touch .nojekyll
 git add --all .
