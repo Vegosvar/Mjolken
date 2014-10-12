@@ -11,6 +11,9 @@ cd gh-pages
 git checkout gh-pages
 cd ..
 ./node_modules/less/bin/lessc assets/css/style.less > gh-pages/assets/css/style.css
+cp -rf assets/ gh-pages/assets
+rm -rf gh-pages/assets/style.css
+cp -rf index.html gh-pages
 cd gh-pages
 touch .nojekyll
 git add --all .
