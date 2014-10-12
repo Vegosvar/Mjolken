@@ -9,10 +9,12 @@ git checkout master
 sha=$(git rev-parse HEAD)
 cd gh-pages
 git checkout gh-pages
+rm -rf assets/
+rm -rf index.html
 cd ..
 ./node_modules/less/bin/lessc assets/css/style.less > gh-pages/assets/css/style.css
 cp -rf assets/ gh-pages/assets
-rm -rf gh-pages/assets/style.css
+rm -r gh-pages/assets/css/*.less
 cp -rf index.html gh-pages
 cd gh-pages
 touch .nojekyll
