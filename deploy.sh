@@ -14,5 +14,5 @@ cd ..
 cd gh-pages
 touch .nojekyll
 git add --all .
-git commit -m 'Updating to Mjolken/Mjolken@${sha}'
+git commit -m 'Updating to Mjolken/Mjolken@'${sha}
 git push origin gh-pages -q
