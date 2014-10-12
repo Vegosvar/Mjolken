@@ -1,0 +1,236 @@
+//Todo: Ensure all a-elements etc have th ecorrect font.
+
+//***************** VARIABLES ******************//
+
+@color-lightBlue: 			#43c4e3;
+@color-mediumBlue: 			#44c4e1;
+@color-darkBlue: 			#1c9dba;
+
+@color-light: 				#ffffff;
+@color-lightGray: 			#f6f6f6;
+@color-mediumGray: 			#d0d2d2;
+@color-dark: 				#1b1b1b;
+
+@color-black:				#232323;
+
+@color-yellow: 				#f8eb30;
+
+@color-green:				#54dd51;
+
+@color-darkRed: 			#ad2527;
+@color-darkerRed: 			#9d1d1f;
+@color-bloodRed:			#77121a;
+
+@color-brown: 				#6f412a;
+@color-darkBrown:			#3a2213;
+
+@brand-color: 				@color-lightBlue;
+
+@brand-font: 			'Open Sans';
+
+//***************** GLOBAL ******************//
+
+body{
+	.antialiased;
+  	min-width: 960px !important;
+	font-family: @brand-font !important;
+}
+
+h1 {
+	line-height: 1.1 !important;
+	font-weight: 700 !important;
+	font-family: @brand-font !important;
+	font-weight: 400 !important;
+	color: @color-dark !important;
+}
+
+h2 {
+	line-height: 1.2 !important;
+	font-weight: 700 !important;
+	font-family: @brand-font !important;
+	font-weight: 400 !important;
+	color: @color-dark !important;
+}
+
+h3 {
+	font-size: 24pt !important;
+	font-weight: 400 !important;
+	line-height: 1.2 !important;
+	font-family: @brand-font !important;
+	font-weight: 300 !important;
+	color: @color-dark !important;
+}
+
+h4 {
+	font-size: 20px !important;
+	line-height: 1.2 !important;
+	font-family: @brand-font !important;
+	font-weight: 400 !important;
+	color: @color-dark !important;
+}
+
+p {
+	font-family: @brand-font !important;
+	line-height: 25px;
+	font-size: 10pt;
+	font-weight: 400 !important;
+	color: @color-dark !important;
+}
+
+a {
+	font-family: @brand-font !important;
+}
+
+
+//***************** SHORTCUTS ******************//
+
+.no-margin {
+	margin: 0 !important;
+}
+
+.full-width{
+	width: 100%;
+}
+
+.antialiased{
+	-webkit-font-smoothing: antialiased;
+}
+
+
+//***************** MIXINS ******************//
+
+.transition (@prop: all, @time: 0.15s, @ease: linear) {
+    -webkit-transition: @prop @time @ease;
+    -moz-transition: @prop @time @ease;
+    -o-transition: @prop @time @ease;
+    -ms-transition: @prop @time @ease;
+    transition: @prop @time @ease;
+}
+
+//***************** LAYOUT ******************//
+
+.logo { //Logo
+	img {
+		margin-top: -2px;
+		width: 130px;
+		.transition(all, 0.1s, ease-in);
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+}
+
+//* Header and Menu *//
+header {
+	#navbar-collapse{
+		width: auto !important;
+		right: 0 !important;
+		left: 0 !important;
+	}
+	&.navbar {
+		border: none;
+		background: @brand-color;
+		color: @color-light;
+		margin-bottom: 0;
+		ul{
+			a {
+				.transition(all, 0.1s, ease-in);
+				color: @color-light;
+				font-weight: bold;
+				font-size: 15px;
+				@media (min-width: 480px) and (max-width: 995px) {
+					padding: 15px 8px;
+				}
+				@media (min-width: 480px) {
+					font-size: 14px;
+				}
+				&:hover {
+					color: @brand-color;
+					background: @color-lightGray;
+				}
+			}
+		}
+		.navbar-toggle {
+			background-color: @brand-color;
+			.icon-bar {
+				background: #fff;
+			}
+		}
+		.navbar-collapse.in {
+			overflow-y: visible;
+		}
+	}
+}
+
+.hero {
+	height: 520px;
+	background-color: @color-lightGray;
+	.inner {
+		width: 600px;
+	}
+	img {
+		width: 600px;
+		margin-top: 200px;
+	}
+	h2 {
+		color: @color-mediumGray !important;
+		margin-top: -50px;
+		margin-left: 245px;
+		font-size: 22pt;
+		font-weight: 300 !important;
+	}
+	.whitecircle {
+		margin-top: 110px;
+		background: @color-light;
+		width: 110px;
+		height: 110px;
+		border-radius: 50%;
+	}
+	.circle {
+		background: @color-mediumBlue;
+		width: 80px;
+		height: 80px;
+		border-radius: 50%;
+		text-align: center;
+		color: @color-light;
+		font-size: 30pt;
+		margin-top: -95px;
+		.glyphicon {
+			margin-top: 25px;
+		}
+	}
+}
+
+.fixed-container {
+	min-width: 1170px;
+	margin: 0 auto;
+}
+
+.main {
+	margin-top: 100px;
+	.fixed-container {
+		margin-bottom: 100px;
+		h3 {
+			margin-top: 50px;
+			margin-bottom: 20px;
+		}
+	}
+
+	.bigCircle {
+		float: left;
+		margin-right: 40px;
+		height: 300px;
+		width: 300px;
+		border-radius: 50%;
+		&.yellow {
+			background-color: @color-yellow;
+		}
+		img {
+			width: 210px;
+			&.svensk {
+				margin-left: 50px;
+				margin-top: -30px;
+			}
+		}
+	}
+}
