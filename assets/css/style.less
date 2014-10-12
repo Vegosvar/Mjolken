@@ -97,10 +97,7 @@ a {
 	-webkit-font-smoothing: antialiased;
 }
 
-@-webkit-keyframes redAnimation {
-    from { background-position: 0 0; }
-    to { background-position: -361px 0; }
-}
+
 
 
 //***************** MIXINS ******************//
@@ -129,11 +126,16 @@ a {
 
 header {
 	&.menu {
+		position: fixed;
 		border: none;
-		background: @brand-color;
 		color: @color-light;
 		margin-bottom: 0;
-		overflow: hidden;
+		background: @brand-color;
+		z-index: 100;
+		width: 100%;
+		.fixed-container{
+			background: @brand-color;
+		}
 		ul {
 			li {
 				list-style: none;
@@ -158,6 +160,7 @@ header {
 
 .hero {
 	width: 100%;
+	min-width: 1170px;
 	height: 520px;
 	background-color: @color-lightGray;
 	.inner {
@@ -221,10 +224,21 @@ header {
 		width: 300px;
 		border-radius: 50%;
 		&.yellow {
-			background-color: @color-yellow;
+			background: @color-yellow url(../img/mjolk.png);
+			@-webkit-keyframes mjolkAnimation {
+			    from { background-position: 0 0; }
+			    to { background-position: -361px 0; }
+			}
+			animation: mjolkAnimation 2s infinite;
+			-webkit-animation: mjolkAnimation 2s infinite;
+    		-webkit-animation-timing-function: linear;
 		}
 		&.darkRed {
 			background: @color-darkRed url(../img/sperma.png);
+			@-webkit-keyframes redAnimation {
+			    from { background-position: 0 0; }
+			    to { background-position: -361px 0; }
+			}
 			animation: redAnimation 10s infinite;
 			-webkit-animation: redAnimation 10s infinite;
     		-webkit-animation-timing-function: linear;
