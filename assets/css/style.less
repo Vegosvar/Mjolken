@@ -282,7 +282,7 @@ header {
 		.pipe1{
 			background: @color-darkRed url(../img/sperma.png);
 			position: absolute;
-			margin-top: 285px;
+			margin-top: 298px;
 			margin-left: 218px;
 			width: 30px;
 			height: 100px;
@@ -318,7 +318,7 @@ header {
 			position: absolute;
 			margin-top: 385px;
 			margin-left: 218px;
-			width: 330px;
+			width: 307px;
 			height: 30px;
 			z-index: -1;
 		}
@@ -326,7 +326,7 @@ header {
 			background: @color-lightBlue;
 			position: absolute;
 			margin-top: 385px;
-			margin-left: 548px;
+			margin-left: 525px;
 			width: 30px;
 			height: 100px;
 			z-index: -1;
@@ -343,28 +343,84 @@ header {
 		margin-bottom: 20px;
 	}
 	.separation {
-		width: 600px;
+		width: 650px;
 	}
 	.timmar{
 		display: block;
 		position: absolute;
-		margin-left: 300px;
+		margin-left: 285px;
 		margin-top: 110px;
-		font-size: 60pt !important;
+		font-size: 55pt !important;
 		line-height: 1.2 !important;
 		font-family: @brand-font !important;
 		font-weight: 300 !important;
-		color: @color-dark !important;
+		color: #c1b49a !important;
+			animation: starAnimationOne 5s infinite;
+			-webkit-animation: starAnimationOne 5s infinite;
+	}
+	.star{
+		position: absolute;
+		width: 4px;
+		height: 4px;
+		background: #c1b49a;
+		border-radius: 5px;
+		@-webkit-keyframes starAnimationOne {
+		    0% { opacity: 1; }
+		    50% { opacity: 0.5; }
+		    100% { opacity: 1; }
+		}
+		@-webkit-keyframes starAnimationTwo {
+		    0% { opacity: 0.3; }
+		    80% { opacity: 1; }
+		    100% { opacity: 0.1; }
+		}
+		@-webkit-keyframes starAnimationThree {
+		    0% { opacity: 0.3; }
+		    10% { opacity: 1; }
+		    100% { opacity: 0.3; }
+		}
+		&.pos1{
+			margin-top: 70px;
+			margin-left: 270px;
+			animation: starAnimationOne 5s infinite;
+			-webkit-animation: starAnimationOne 5s infinite;
+		}
+		&.pos2{
+			margin-top: 50px;
+			margin-left: 350px;
+			animation: starAnimationTwo 5s infinite;
+			-webkit-animation: starAnimationTwo 5s infinite;
+		}
+		&.pos3{
+			margin-top: 85px;
+			margin-left: 340px;
+			animation: starAnimationThree 5s infinite;
+			-webkit-animation: starAnimationThree 5s infinite;
+		}
+		&.pos4{
+			margin-top: 80px;
+			margin-left: 380px;
+			animation: starAnimationTwo 5s infinite;
+			-webkit-animation: starAnimationTwo 5s infinite;
+		}
 	}
 	.pipe1{
-		background: @color-darkRed url(../img/sperma.png);
+		background: @color-mediumGray;
 		position: absolute;
-		margin-top: 285px;
-		margin-left: 218px;
-		width: 30px;
-		height: 100px;
+		margin-top: 150px;
+		margin-left: -100px;
+		width: 900px;
+		height: 30px;
 		z-index: -1;
-		-webkit-animation: redAnimation 20s infinite;
-		-webkit-animation-timing-function: linear;
+	}
+	.pipe1{
+		background: @color-mediumGray;
+		position: absolute;
+		margin-top: 150px;
+		margin-left: -100px;
+		width: 900px;
+		height: 30px;
+		z-index: -1;
+
 	}
 }
