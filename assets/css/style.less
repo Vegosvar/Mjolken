@@ -469,11 +469,11 @@ header {
 
 	.del5 {
 		float: left;
-		margin-bottom: 100px;
+		margin-bottom: 75px;
 		width: 100%;
 		h3 {
-			margin-top: 30px;
-			margin-bottom: 20px;
+			margin-top: 20px;
+			margin-bottom: 30px;
 		}
 		.mjolkning {
 			margin-top: 20px;
@@ -499,24 +499,15 @@ header {
 			position: absolute;
 			width: 60px;
 			z-index: -1;
-			margin-top: 250px;
+			margin-top: 200px;
 			margin-left: 200px;
 			@-webkit-keyframes mjolkkartong {
-			    0% { margin-top: 250px; margin-left: 240px; }
-			    10% { margin-left: 270px; }
-			    20% { margin-left: 275px; }
-			    30% { margin-left: 280px; }
-			    40% { margin-left: 283px; }
-			    50% { margin-top: 280px; margin-left: 285px; }
-			    60% { margin-left: 283px; }
-			    70% { margin-left: 280px; }
-			    80% { margin-left: 275px; }
-			    90% { margin-left: 270px; }
-			    100% { margin-top: 650px; margin-left: 260px; }
+			    0% { margin-top: 230px; margin-left: 200px; }
+			    50% { margin-top: 230px; margin-left: 285px; }
+			    100% { margin-top: 650px; margin-left: 200px; }
 			}
-			animation: mjolkkartong 1s infinite;
-			-webkit-animation: mjolkkartong 1s infinite;
-    		-webkit-animation-timing-function: linear;
+			animation: mjolkkartong 1.7s infinite;
+			-webkit-animation: mjolkkartong 1.7s infinite;
 
 		}
 		.pipe1{
@@ -528,6 +519,34 @@ header {
 			height: 300px;
 			z-index: -1;
 
+		}
+		.bigCircle{
+			float: none;
+			display: inline-block;
+		}
+	}
+
+	.del6 {
+		float: left;
+		margin-bottom: 100px;
+		width: 100%;
+		h3 {
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+		.packetering {
+			margin-top: 0px;
+			margin-left: 0px;
+			width: 650px;
+		}
+		.pipe1{
+			background: @color-darkBrown;
+			position: absolute;
+			margin-top: 250px;
+			margin-left: 330px;
+			width: 30px;
+			height: 300px;
+			z-index: -1;
 		}
 		.bigCircle{
 			float: none;
