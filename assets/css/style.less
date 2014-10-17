@@ -184,7 +184,7 @@ header {
 		width: 600px;
 		margin-top: 200px;
 	}
-	h2 {
+	h1 {
 		color: @color-mediumGray !important;
 		margin-top: -50px;
 		margin-left: 245px;
@@ -275,7 +275,7 @@ header {
 		float: left;
 		margin-bottom: 80px;
 		width: 100%;
-		h3 {
+		h2 {
 			margin-top: 40px;
 			margin-bottom: 20px;
 		}
@@ -955,27 +955,30 @@ header {
 			margin-bottom: 80px;
 			color: @color-lightBlue !important;
 		}
-		.bigCircle {
-			display: inline;
-			box-shadow: 50px 60px 40px #000;
-			@-webkit-keyframes mjolkShadow {
-			    0% { box-shadow: 50px 60px 40px #999; }
-			    50% { box-shadow: 3px 60px 40px #999;}
-			    100% { box-shadow: 50px 60px 40px #999;}
-			}
-			animation: mjolkShadow 4.0s infinite;
-			-webkit-animation: mjolkShadow 4.0s infinite;
-			img{
-				width: 130px;
-				margin-left: 20px;
-				margin-right: 20px;
-				cursor: pointer;
-			}
-			span{
-				position: absolute;
-				margin-top: 183px;
-				margin-left: -130px;
-				color: #999;
+		.mjolker{
+			margin-bottom: 100px;
+			.bigCircle {
+				display: inline;
+				box-shadow: 50px 60px 40px #000;
+				@-webkit-keyframes mjolkShadow {
+				    0% { box-shadow: 50px 60px 40px #999; }
+				    50% { box-shadow: 3px 60px 40px #999;}
+				    100% { box-shadow: 50px 60px 40px #999;}
+				}
+				animation: mjolkShadow 4.0s infinite;
+				-webkit-animation: mjolkShadow 4.0s infinite;
+				img{
+					width: 130px;
+					margin-left: 20px;
+					margin-right: 20px;
+					cursor: pointer;
+				}
+				span{
+					position: absolute;
+					margin-top: 183px;
+					margin-left: -130px;
+					color: #999;
+				}
 			}
 		}
 	}
