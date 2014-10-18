@@ -130,17 +130,6 @@ img {
 
 //***************** LAYOUT ******************//
 
-.logo { //Logo
-  float: left;
-  img {
-    margin-top: 13px;
-    width: 130px;
-    .transition(all, 0.1s, ease-in);
-    &:hover {
-      opacity: 0.7;
-    }
-  }
-}
 
 header {
   &.menu {
@@ -155,6 +144,19 @@ header {
     .fixed-container {
       background: @brand-color;
     }
+	.logo {
+	  float: left;
+	  img {
+	    margin-top: 13px;
+	    width: 130px;
+	    height: auto;
+	    display: inline;
+	    .transition(all, 0.1s, ease-in);
+	    &:hover {
+	      opacity: 0.7;
+	    }
+	  }
+	}
     .share {
         float: right;
         @media only screen and (max-width: 1170px){
