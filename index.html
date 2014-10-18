@@ -63,17 +63,16 @@
 		</script>
 
 		<script type="text/javascript">
-			jQuery(document).ready(function()
-			{
-				jQuery('.hasPopover').popover({"html": true,"trigger": "hover","container": "body"});
-			});
+			jQuery(document).ready(function () {
+				jQuery('.hasPopover').popover({ html: true, trigger: "hover", container: "body" })
+			})
 		</script>
 
 		<script>
-			if(!Modernizr.svgasimg) {
-			    $('img[src*="svg"]').attr('src', function() {
+			if (!Modernizr.svgasimg) {
+			    $('img[src*="svg"]').attr('src', function () {
 			        return $(this).attr('src').replace('.svg', '.png');
-			    });
+			    })
 			}
 		</script>
 	</head>
