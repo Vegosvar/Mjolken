@@ -1,0 +1,8 @@
+{
+    "branches": {
+        "master": [
+            "git pull",
+            "lessc assets/css/style.less > assets/css/style.css"
+        ]
+    }
+}
