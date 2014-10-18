@@ -149,6 +149,7 @@ header {
     color: @color-light;
     margin-bottom: 0;
     background: @brand-color;
+    box-shadow: 0px 1px 1px rgba(0,0,0,0.04);
     z-index: 100;
     width: 100%;
     .fixed-container {
@@ -969,8 +970,8 @@ header {
         box-shadow: 50px 60px 40px #000;
         @-webkit-keyframes mjolkShadow {
           0% { box-shadow: 50px 40px 40px #999; }
-          50% { box-shadow: 3px 40px 40px #999;}
-          100% { box-shadow: 50px 40px 40px #999;}
+          50% { box-shadow: 3px 40px 40px #999; }
+          100% { box-shadow: 50px 40px 40px #999; }
         }
         animation: mjolkShadow 4.0s infinite;
         -webkit-animation: mjolkShadow 4.0s infinite;
@@ -1001,12 +1002,84 @@ header {
       color: @color-light !important;
       font-weight: 700 !important;
     }
-
     h4 {
       margin-bottom: 30px;
       color: @color-light !important;
     }
-
+    .share {
+      display: inline-block;
+      padding: 8px 12px;
+      background: #fff;
+      color: @color-lightBlue;
+      border-radius: 5px;
+      margin: 0px 5px 60px 0px;
+      font-size: 17px;
+      &:hover {
+        text-decoration: none;
+        background: #e5f9ff;
+      }
+    }
+    .vote {
+      background: #fff;
+      padding: 50px;
+      width: 100%;
+      margin-bottom: 80px;
+      border-radius: 10px;
+      h3 {
+      	margin-top: 0;
+        color: #b3b3b3 !important;
+        font-weight: 300 !important;
+      }
+      h4 {
+        color: @color-lightBlue !important;
+      }
+      a{
+      	display: inline-block;
+      	padding: 10px 25px;
+      	border: 1px solid @color-lightBlue;
+      	border-radius: 5px;
+      	color: @color-lightBlue;
+      	font-size: 16pt;
+      	margin: 0px 5px;
+        .transition(all, 0.1s, ease-in);
+      	&:hover{
+      		text-decoration: none;
+      		background: @color-lightBlue;
+      		color: #fff;
+      	}
+      }
+    }
+    .sources {
+      color: darken(@color-lightBlue, 20%) !important;
+      font-size: 9pt;
+      margin-bottom: 10px;
+      a{
+        color: darken(@color-lightBlue, 20%);
+        display: inline-block;
+        background: lighten(@color-lightBlue, 3%);
+        padding: 3px 8px;
+        margin-left: 5px;
+        border-radius: 10px;
+        .transition(background, 0.1s, ease-in);
+        &:hover {
+          text-decoration: none;
+          background: lighten(@color-lightBlue, 10%);
+        }
+      }
+    }
+    .disclaimer {
+      color: @color-light !important;
+      font-size: 9pt;
+      line-height: 1.5;
+      margin-bottom: 15px;
+      a {
+        color: @color-light;
+        &:hover {
+          text-decoration: none;
+          opacity: 0.8;
+        }
+      }
+    }
     .links {
       height: 50px;
       width: 100%;
@@ -1037,57 +1110,6 @@ header {
             }
           }
         }
-      }
-    }
-    .sources {
-      color: darken(@color-lightBlue, 20%) !important;
-      font-size: 11pt;
-      margin-bottom: 15px;
-      a{
-        color: darken(@color-lightBlue, 20%);
-        display: inline-block;
-        background: lighten(@color-lightBlue, 3%);
-        padding: 3px 8px;
-        margin-left: 5px;
-        border-radius: 10px;
-        .transition(background, 0.1s, ease-in);
-        &:hover {
-          text-decoration: none;
-          background: lighten(@color-lightBlue, 10%);
-        }
-      }
-    }
-    .disclaimer {
-      color: @color-light !important;
-      font-size: 11pt;
-      a {
-        color: @color-light;
-        &:hover {
-          text-decoration: none;
-        }
-      }
-    }
-    .share {
-      display: inline-block;
-      padding: 8px 12px;
-      background: #fff;
-      color: @color-lightBlue;
-      border-radius: 5px;
-      margin: 0px 5px 30px 0px;
-      font-size: 17px;
-      &:hover {
-        text-decoration: none;
-        background: #e5f9ff;
-      }
-    }
-    .vote {
-      background: #fff;
-      padding: 50px;
-      width: 100%;
-      margin-bottom: 20px;
-      border-radius: 10px;
-      h4 {
-        color: @color-lightBlue !important;
       }
     }
   }
