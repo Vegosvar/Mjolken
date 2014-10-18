@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    var socket = io.connect('://mjolken.se:7000');
+    var socket = io.connect('https://voting.mjolken.se');
     var votes = null
     var displayError = function () {
 
