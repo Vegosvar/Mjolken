@@ -1041,7 +1041,7 @@ header.menu ul li a:hover {
 }
 .main .del12 .mjolker .bigCircle {
   display: inline;
-  box-shadow: 50px 60px 40px #000;
+  box-shadow: 50px 60px 40px #999;
   animation: mjolkShadow 4.0s infinite;
   -webkit-animation: mjolkShadow 4.0s infinite;
 }
@@ -1120,7 +1120,7 @@ header.menu ul li a:hover {
   border-radius: 5px;
   color: #43c4e3;
   font-size: 16pt;
-  margin: 0px 5px;
+  margin: 0px 5px 30px 5px;
   -webkit-transition: all 0.1s ease-in;
   -moz-transition: all 0.1s ease-in;
   -o-transition: all 0.1s ease-in;
@@ -1136,13 +1136,14 @@ header.menu ul li a:hover {
   width: 300px;
   margin-left: auto;
   margin-right: auto;
-  height: 350px;
+  height: 280px;
   background: #f6f6f6;
   border-radius: 5px;
+  padding-top: 30px;
 }
 .main footer .vote .results .stats {
   position: absolute;
-  height: 300px;
+  height: 200px;
 }
 .main footer .vote .results .stats .ja {
   position: absolute;
