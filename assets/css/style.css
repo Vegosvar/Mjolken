@@ -1043,19 +1043,19 @@ header.menu ul li a:hover {
 }
 .main .del12 .mjolker .bigCircle {
   display: inline;
-  box-shadow: 50px 60px 40px #999;
+  box-shadow: 50px 60px 40px #bdbdbd;
   animation: mjolkShadow 4.0s infinite;
   -webkit-animation: mjolkShadow 4.0s infinite;
 }
 @-webkit-keyframes mjolkShadow {
   0% {
-    box-shadow: 50px 40px 40px #999;
+    box-shadow: 50px 40px 40px #bdbdbd;
   }
   50% {
-    box-shadow: 3px 40px 40px #999;
+    box-shadow: 3px 40px 40px #bdbdbd;
   }
   100% {
-    box-shadow: 50px 40px 40px #999;
+    box-shadow: 50px 40px 40px #bdbdbd;
   }
 }
 .main .del12 .mjolker .bigCircle img {
