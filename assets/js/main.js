@@ -1,5 +1,26 @@
-var socket = io.connect('http://localhost:7000');
-socket.on('votes', function (data) {
-    console.log(data)
-});
-socket.emit('vote', { vote: 'yes' })
+$(document).ready(function () {
+    var socket = io.connect('://mjolken.se:4000');
+    var votes = null
+    var displayError = function () {
+
+    }
+    var displayError = function (error) {
+
+    }
+    socket.on('initial', function (data) {
+        if (data.voted) {
+            displayResults()
+        }
+    })
+
+    socket.on('votes', function (data) {
+        votes = data
+    })
+
+    socket.on('voteresult', function (data) {
+        if (data.error) {
+            displayError(data.error)
+        }
+        displayResults()
+    })
+})
