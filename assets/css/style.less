@@ -1055,6 +1055,59 @@ header {
       		color: #fff;
       	}
       }
+      .results {
+      	width: 300px;
+      	margin-left: auto;
+      	margin-right: auto;
+      	height: 350px;
+      	background: #f6f6f6;
+      	border-radius: 5px;
+      	.stats {
+      		position: absolute;
+      		height: 300px;
+      		.ja {
+      			position: absolute;
+      			bottom: 0;
+      			margin-left: 30px;
+      			width: 60px;
+      			background: #24b337;
+      			border-radius: 3px;
+      		}
+      		.kanske {
+      			position: absolute;
+      			bottom: 0;
+      			margin-left: 120px;
+      			width: 60px;
+      			background: #e3c22b;
+      			border-radius: 3px;
+      		}
+      		.nej {
+      			position: absolute;
+      			bottom: 0;
+      			margin-left: 210px;
+      			width: 60px;
+      			background: @color-darkRed;
+      			border-radius: 3px;
+      		}
+      		.procent{
+      			position: absolute;
+      			display: block;
+      			bottom: 0;
+      			width: 100%;
+      			text-align: center;
+      			font-weight: bold;
+      		}
+      		.alternativ{
+      			position: absolute;
+      			display: block;
+      			bottom: -25px;
+      			width: 100%;
+      			text-align: center;
+      			font-weight: bold;
+      			color: #848484;
+      		}
+      	}
+      }
     }
     .sources {
       color: darken(@color-lightBlue, 20%) !important;
