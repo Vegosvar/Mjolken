@@ -65,21 +65,6 @@ img {
 .antialiased {
   -webkit-font-smoothing: antialiased;
 }
-.logo {
-  float: left;
-}
-.logo img {
-  margin-top: 13px;
-  width: 130px;
-  -webkit-transition: all 0.1s ease-in;
-  -moz-transition: all 0.1s ease-in;
-  -o-transition: all 0.1s ease-in;
-  -ms-transition: all 0.1s ease-in;
-  transition: all 0.1s ease-in;
-}
-.logo img:hover {
-  opacity: 0.7;
-}
 header.menu {
   position: fixed;
   border: none;
@@ -92,6 +77,23 @@ header.menu {
 }
 header.menu .fixed-container {
   background: #43c4e3;
+}
+header.menu .logo {
+  float: left;
+}
+header.menu .logo img {
+  margin-top: 13px;
+  width: 130px;
+  height: auto;
+  display: inline;
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
+  -ms-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+}
+header.menu .logo img:hover {
+  opacity: 0.7;
 }
 header.menu .share {
   float: right;
