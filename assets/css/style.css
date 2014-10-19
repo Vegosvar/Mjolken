@@ -1130,6 +1130,7 @@ header.menu ul li a:hover {
   -o-transition: all 0.1s ease-in;
   -ms-transition: all 0.1s ease-in;
   transition: all 0.1s ease-in;
+  cursor: pointer;
 }
 .main footer .vote #nej:hover,
 .main footer .vote #ja:hover,
