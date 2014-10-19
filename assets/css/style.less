@@ -1062,7 +1062,6 @@ header {
       	margin-left: auto;
       	margin-right: auto;
       	height: 280px;
-      	background: #f6f6f6;
       	border-radius: 5px;
       	padding-top: 30px;
       	.stats {
@@ -1071,34 +1070,49 @@ header {
       		.ja {
       			position: absolute;
       			bottom: 0;
-      			margin-left: 30px;
       			width: 60px;
       			background: #24b337;
       			border-radius: 3px;
+      			.procent {
+      				color: #24b337;
+      			}
       		}
       		.kanske {
       			position: absolute;
       			bottom: 0;
-      			margin-left: 120px;
       			width: 60px;
-      			background: #e3c22b;
+      			background: #eab71f;
       			border-radius: 3px;
+      			.procent {
+      				color: #eab71f;
+      			}
       		}
       		.nej {
       			position: absolute;
       			bottom: 0;
-      			margin-left: 210px;
       			width: 60px;
       			background: @color-darkRed;
       			border-radius: 3px;
+      			.procent {
+      				color: @color-darkRed;
+      			}
       		}
       		.procent{
       			position: absolute;
       			display: block;
-      			bottom: 0;
+      			top: -30px;
       			width: 100%;
       			text-align: center;
       			font-weight: bold;
+      			border-radius: 3px;
+      			font-size: 14pt;
+      		}
+      		.holder{
+      			float: left;
+      			width: 60px;
+      			height: 200px;
+      			margin: 0px 20px;
+      			border-radius: 3px;
       		}
       		.alternativ{
       			position: absolute;
