@@ -22,7 +22,7 @@ $(document).ready(function () {
     }
 
     var displayResults = function () {
-        $('.toggleVotes h3').html('<span class="glyphicon glyphicon-signal"></span>  ' + totalVotes + ' röster')
+        $('.totalVotes').html('<span class="glyphicon glyphicon-signal"></span>  ' + totalVotes + ' röster')
         var yesPercent = Math.floor(votes.yes / totalVotes * 100)
         var noPercent = Math.floor(votes.no / totalVotes * 100)
         var maybePercent = Math.floor(votes.maybe / totalVotes * 100)
