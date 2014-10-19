@@ -1146,7 +1146,6 @@ header.menu ul li a:hover {
   margin-left: auto;
   margin-right: auto;
   height: 280px;
-  background: #f6f6f6;
   border-radius: 5px;
   padding-top: 30px;
 }
@@ -1157,37 +1156,49 @@ header.menu ul li a:hover {
 .main footer .vote .results .stats .yes {
   position: absolute;
   bottom: 0;
-  margin-left: 30px;
   width: 60px;
   background: #24b337;
-  min-height: 30px;
   border-radius: 3px;
+}
+.main footer .vote .results .stats .yes .procent {
+  color: #24b337;
 }
 .main footer .vote .results .stats .maybe {
   position: absolute;
   bottom: 0;
-  margin-left: 120px;
   width: 60px;
-  background: #e3c22b;
-  min-height: 30px;
+  background: #eab71f;
   border-radius: 3px;
+}
+.main footer .vote .results .stats .maybe .procent {
+  color: #eab71f;
 }
 .main footer .vote .results .stats .no {
   position: absolute;
   bottom: 0;
-  margin-left: 210px;
   width: 60px;
   background: #ad2527;
-  min-height: 30px;
   border-radius: 3px;
+}
+.main footer .vote .results .stats .no .procent {
+  color: #ad2527;
 }
 .main footer .vote .results .stats .procent {
   position: absolute;
   display: block;
-  bottom: 5px;
+  top: -30px;
   width: 100%;
   text-align: center;
   font-weight: bold;
+  border-radius: 3px;
+  font-size: 14pt;
+}
+.main footer .vote .results .stats .holder {
+  float: left;
+  width: 60px;
+  height: 200px;
+  margin: 0px 20px;
+  border-radius: 3px;
 }
 .main footer .vote .results .stats .alternativ {
   position: absolute;
