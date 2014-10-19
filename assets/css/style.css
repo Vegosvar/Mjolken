@@ -1115,7 +1115,9 @@ header.menu ul li a:hover {
 .main footer .vote h4 {
   color: #43c4e3 !important;
 }
-.main footer .vote a {
+.main footer .vote #nej,
+.main footer .vote #ja,
+.main footer .vote #kanske {
   display: inline-block;
   padding: 10px 25px;
   border: 1px solid #43c4e3;
@@ -1129,10 +1131,15 @@ header.menu ul li a:hover {
   -ms-transition: all 0.1s ease-in;
   transition: all 0.1s ease-in;
 }
-.main footer .vote a:hover {
+.main footer .vote #nej:hover,
+.main footer .vote #ja:hover,
+.main footer .vote #kanske:hover {
   text-decoration: none;
   background: #43c4e3;
   color: #fff;
+}
+.main footer .vote .toggleVotes h3 {
+  margin-top: 20px;
 }
 .main footer .vote .results {
   width: 300px;
@@ -1147,34 +1154,37 @@ header.menu ul li a:hover {
   position: absolute;
   height: 200px;
 }
-.main footer .vote .results .stats .ja {
+.main footer .vote .results .stats .yes {
   position: absolute;
   bottom: 0;
   margin-left: 30px;
   width: 60px;
   background: #24b337;
+  min-height: 30px;
   border-radius: 3px;
 }
-.main footer .vote .results .stats .kanske {
+.main footer .vote .results .stats .maybe {
   position: absolute;
   bottom: 0;
   margin-left: 120px;
   width: 60px;
   background: #e3c22b;
+  min-height: 30px;
   border-radius: 3px;
 }
-.main footer .vote .results .stats .nej {
+.main footer .vote .results .stats .no {
   position: absolute;
   bottom: 0;
   margin-left: 210px;
   width: 60px;
   background: #ad2527;
+  min-height: 30px;
   border-radius: 3px;
 }
 .main footer .vote .results .stats .procent {
   position: absolute;
   display: block;
-  bottom: 0;
+  bottom: 5px;
   width: 100%;
   text-align: center;
   font-weight: bold;
