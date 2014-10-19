@@ -49,10 +49,11 @@ $(document).ready(function () {
     })
 
     socket.on('voteresult', function (data) {
+        $.cookie('hasVoted', true)
         if (data.error) {
             displayError()
         } else {
-            displayDone()       
+            displayDone()
         }
     })
 })
