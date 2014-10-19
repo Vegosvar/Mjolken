@@ -1042,7 +1042,7 @@ header {
       h4 {
         color: @color-lightBlue !important;
       }
-      a{
+      #nej, #ja, #kanske {
       	display: inline-block;
       	padding: 10px 25px;
       	border: 1px solid @color-lightBlue;
@@ -1057,6 +1057,9 @@ header {
       		color: #fff;
       	}
       }
+      .toggleVotes h3 {
+        margin-top: 20px;
+      }
       .results {
       	width: 300px;
       	margin-left: auto;
@@ -1068,34 +1071,37 @@ header {
       	.stats {
       		position: absolute;
       		height: 200px;
-      		.ja {
+      		.yes {
       			position: absolute;
       			bottom: 0;
       			margin-left: 30px;
       			width: 60px;
       			background: #24b337;
+            min-height: 30px;
       			border-radius: 3px;
       		}
-      		.kanske {
+      		.maybe {
       			position: absolute;
       			bottom: 0;
       			margin-left: 120px;
       			width: 60px;
       			background: #e3c22b;
+            min-height: 30px;
       			border-radius: 3px;
       		}
-      		.nej {
+      		.no {
       			position: absolute;
       			bottom: 0;
       			margin-left: 210px;
       			width: 60px;
       			background: @color-darkRed;
+            min-height: 30px;
       			border-radius: 3px;
       		}
       		.procent{
       			position: absolute;
       			display: block;
-      			bottom: 0;
+      			bottom: 5px;
       			width: 100%;
       			text-align: center;
       			font-weight: bold;
