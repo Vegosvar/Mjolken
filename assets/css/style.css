@@ -1209,6 +1209,10 @@ header.menu ul li a:hover {
   text-align: center;
   color: #848484;
 }
+.main footer .vote .info {
+  line-height: 1.2 !important;
+  color: #999 !important;
+}
 .main footer .sources {
   color: #198ca7 !important;
   font-size: 9pt;
