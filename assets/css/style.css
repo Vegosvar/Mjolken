@@ -449,7 +449,7 @@ header.menu ul li a:hover {
   margin-top: 150px;
   margin-left: 770px;
   width: 30px;
-  height: 2300px;
+  height: 2350px;
   z-index: -1;
 }
 .main .del4 .pipe5 {
@@ -1225,6 +1225,7 @@ header.menu ul li a:hover {
   padding: 3px 8px;
   margin-left: 5px;
   border-radius: 10px;
+  margin-bottom: 5px;
   -webkit-transition: background 0.1s ease-in;
   -moz-transition: background 0.1s ease-in;
   -o-transition: background 0.1s ease-in;
