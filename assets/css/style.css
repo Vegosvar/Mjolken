@@ -1299,16 +1299,19 @@ footer .links ul li a:hover {
   border-bottom: 10px solid #ad2527;
   display: inline-block;
   padding: 5px;
+  margin-top: 30px;
 }
 .statistics .color-sojadryck {
   border-bottom: 10px solid #35c43c;
   display: inline-block;
   padding: 5px;
+  margin-top: 30px;
 }
 .statistics .color-havredryck {
   border-bottom: 10px solid #ea9b2e;
   display: inline-block;
   padding: 5px;
+  margin-top: 30px;
 }
 .statistics .tablestats {
   position: relative;
