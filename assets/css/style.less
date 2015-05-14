@@ -91,6 +91,10 @@ img {
   height: auto;
 }
 
+strong {
+  font-weight: 700;
+}
+
 .popover {
   font-weight: bold !important;
   box-shadow: none !important;
@@ -138,7 +142,6 @@ header {
     color: @color-light;
     margin-bottom: 0;
     background: @brand-color;
-    box-shadow: 0px 1px 1px rgba(0,0,0,0.04);
     z-index: 100;
     width: 100%;
     .fixed-container {
@@ -170,7 +173,6 @@ header {
         a {
           .transition(all, 0.1s, ease-in);
           color: @color-light;
-          font-weight: bold;
           font-size: 15px;
           padding: 15px 20px;
           display: inline-block;
@@ -188,17 +190,21 @@ header {
 .hero {
   width: 100%;
   min-width: 1170px;
-  height: 520px;
+  height: 570px;
   background-color: @color-lightGray;
   .inner {
     width: 600px;
   }
-  img {
+  .logo {
     width: 600px;
     margin-top: 200px;
   }
+  .vegosvar {
+    margin-top: 50px;
+    width: 180px;
+  }
   h1 {
-    color: @color-mediumGray !important;
+    color: #eaf4f4 !important;
     margin-top: -50px;
     margin-left: 245px;
     font-size: 22pt;
