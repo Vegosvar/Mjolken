@@ -49,6 +49,9 @@ a {
 img {
   height: auto;
 }
+strong {
+  font-weight: 700;
+}
 .popover {
   font-weight: bold !important;
   box-shadow: none !important;
@@ -71,7 +74,6 @@ header.menu {
   color: #ffffff;
   margin-bottom: 0;
   background: #43c4e3;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.04);
   z-index: 100;
   width: 100%;
 }
@@ -114,7 +116,6 @@ header.menu ul li a {
   -ms-transition: all 0.1s ease-in;
   transition: all 0.1s ease-in;
   color: #ffffff;
-  font-weight: bold;
   font-size: 15px;
   padding: 15px 20px;
   display: inline-block;
@@ -127,18 +128,22 @@ header.menu ul li a:hover {
 .hero {
   width: 100%;
   min-width: 1170px;
-  height: 520px;
+  height: 570px;
   background-color: #f6f6f6;
 }
 .hero .inner {
   width: 600px;
 }
-.hero img {
+.hero .logo {
   width: 600px;
   margin-top: 200px;
 }
+.hero .vegosvar {
+  margin-top: 50px;
+  width: 180px;
+}
 .hero h1 {
-  color: #d0d2d2 !important;
+  color: #eaf4f4 !important;
   margin-top: -50px;
   margin-left: 245px;
   font-size: 22pt;
