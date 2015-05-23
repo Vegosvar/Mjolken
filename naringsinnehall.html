@@ -66,8 +66,8 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
   <script src="assets/js/modernizr.js"></script>
-  <script src="https://cdn.socket.io/socket.io-1.1.0.js"></script>
-  <script src="assets/js/main.js" type="text/javascript"></script>
+  <script src="//cdn.socket.io/socket.io-1.1.0.js"></script>
+  <script src="https://voting.mjolken.se/voting.js" type="text/javascript"></script>
 
   <script>
     var isIe = false;
@@ -82,7 +82,46 @@
           return $(this).attr('src').replace('.svg', '.png');
         })
       }
+
       jQuery('.hasPopover').popover({ html: true, trigger: "hover", container: "body" })
+
+      Voting.init({
+        url: 'https://voting.mjolken.se:443',
+
+        id: 'Mjolken',
+
+        choices: {
+          yes: {
+            button: '#ja',
+            result: '.yes',
+            result_percentage: '.yes .procent'
+          },
+
+          no: {
+            button: '#nej',
+            result: '.no',
+            result_percentage: '.no .procent'
+          },
+
+          maybe: {
+            button: '#kanske',
+            result: '.maybe',
+            result_percentage: '.maybe .procent'
+          }
+        },
+
+        elements: {
+          total_votes: '.totalVotes',
+          success: '.votingarea',
+          error: '.votingarea'
+        },
+
+        messages: {
+          total_votes: '<span class="glyphicon glyphicon-signal"></span> {{VOTES}} röster',
+          success: '<h3>Tack för din röst!</h3>',
+          error: '<h3>Du har redan röstat!</h3>'
+        }
+      })
     })
   </script>
 </head>
@@ -228,6 +267,7 @@
           </div>
           <p class="info"><small><em>Det här är en uppskattning. Vi kan inte garantera att personer<br/> inte har röstat mer än en gång från olika enheter.</em></small></p>
         </div>
+        <p class="sources"><strong>Källor</strong> <a href="http://www.djurensratt.se/sites/default/files/mjolkfabriken.pdf" target="_blank">Mjölkfabriken (Djurens rätt)</a> <a href="http://www.djurensratt.se/vara-fragor/djur-i-livsmedelsindustrin/kor-kalvar-tjurar" target="_blank">Kor, kalvar & tjurar (Djurens Rätt)</a> <a href="http://www.arla.se/om-arla/korna/kossan/" target="_blank">Kossan (Arla)</a> <a href="http://www.ne.se/svensk-l%C3%A5glandsboskap" target="_blank">Svenskt Låglandsboskap (NE)</a> <a href="http://www.skansen.se/sv/artikel/laglandsboskap" target="_blank">Låglandsboskap (Skansen)</a></p>              <p class="disclaimer">Det ser inte likadant ut på alla gårdar, men vi har utgått från normen hos ekologiska och vanliga gårdar. </p>
         <p class="disclaimer" style="margin-top: -15px">Ser du något som inte stämmer? Kontakta oss gärna på <a href="mailto:kontakt@mjolken.se"><strong>kontakt@mjolken.se</strong></a></p>
       </div>
     </div>
@@ -240,5 +280,4 @@
       </ul>
     </div>
   </footer>
-
 </body>
