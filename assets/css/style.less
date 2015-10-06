@@ -2,24 +2,24 @@
 
 //***************** VARIABLES ******************//
 
-@color-lightBlue:       #43c4e3;
-@color-mediumBlue:      #44c4e1;
+@color-lightBlue:     #43c4e3;
+@color-mediumBlue:    #44c4e1;
 @color-darkBlue:      #1c9dba;
 
 @color-light:         #ffffff;
-@color-lightGray:       #f6f6f6;
-@color-mediumGray:      #d0d2d2;
+@color-lightGray:     #f6f6f6;
+@color-mediumGray:    #d0d2d2;
 @color-darkGray:      #424343;
-@color-dark:        #1b1b1b;
+@color-dark:          #1b1b1b;
 
-@color-black:       #232323;
+@color-black:         #232323;
 
-@color-yellow:        #f8eb30;
+@color-yellow:        #FFE716;
 
-@color-green:       #54dd51;
+@color-green:         #54dd51;
 
 @color-darkRed:       #ad2527;
-@color-darkerRed:       #9d1d1f;
+@color-darkerRed:     #9d1d1f;
 @color-bloodRed:      #77121a;
 
 @color-brown:         #6f412a;
@@ -32,9 +32,11 @@
 //***************** GLOBAL ******************//
 
 body {
-  .antialiased;
-  min-width: 960px !important;
+  -webkit-font-smoothing: antialiased;
   font-family: @brand-font !important;
+  @media only screen and (max-width : 480px) {
+    text-align: center;
+  }
 }
 
 ::selection {
@@ -44,7 +46,6 @@ body {
 
 h1 {
   line-height: 1.1 !important;
-  font-weight: 700 !important;
   font-family: @brand-font !important;
   font-weight: 400 !important;
   color: @color-dark !important;
@@ -52,15 +53,13 @@ h1 {
 
 h2 {
   line-height: 1.2 !important;
-  font-weight: 700 !important;
   font-family: @brand-font !important;
-  font-weight: 400 !important;
+  font-weight: 300 !important;
   color: @color-dark !important;
 }
 
 h3 {
   font-size: 24pt !important;
-  font-weight: 400 !important;
   line-height: 1.2 !important;
   font-family: @brand-font !important;
   font-weight: 300 !important;
@@ -78,7 +77,8 @@ h4 {
 p {
   font-family: @brand-font !important;
   line-height: 25px;
-  font-size: 11pt;
+  font-size: 12pt;
+  line-height: 1.7;
   font-weight: 400 !important;
   color: @color-darkGray !important;
 }
@@ -89,19 +89,6 @@ a {
 
 img {
   height: auto;
-}
-
-strong {
-  font-weight: 700;
-}
-
-.popover {
-  font-weight: bold !important;
-  box-shadow: none !important;
-}
-
-.hasPopover {
-  cursor: pointer;
 }
 
 
@@ -115,9 +102,6 @@ strong {
   width: 100%;
 }
 
-.antialiased {
-  -webkit-font-smoothing: antialiased;
-}
 
 
 
@@ -137,49 +121,45 @@ strong {
 
 header {
   &.menu {
-    position: fixed;
+    position: absolute;
     border: none;
     color: @color-light;
     margin-bottom: 0;
-    background: @brand-color;
     z-index: 100;
     width: 100%;
-    .fixed-container {
-      background: @brand-color;
-    }
-	.logo {
-	  float: left;
-	  img {
-	    margin-top: 13px;
-	    width: 130px;
-	    height: auto;
-	    display: inline;
-	    .transition(all, 0.1s, ease-in);
-	    &:hover {
-	      opacity: 0.7;
-	    }
-	  }
-	}
+  	.logo {
+  	  float: left;
+  	  img {
+  	    margin-top: 13px;
+  	    width: 130px;
+  	    height: auto;
+  	    display: inline;
+  	    .transition(all, 0.1s, ease-in);
+  	    &:hover {
+  	      opacity: 0.7;
+  	    }
+  	  }
+  	}
     .share {
         float: right;
-        @media only screen and (max-width: 1170px){
-        	float: left;
-        }
     }
     ul {
+      @media only screen and (max-width : 480px) {
+        display: none;
+      }
       li {
         list-style: none;
         float: right;
         a {
-          .transition(all, 0.1s, ease-in);
+          .transition(opacity, 0.1s, ease-in);
           color: @color-light;
+          font-weight: 400;
           font-size: 15px;
           padding: 15px 20px;
           display: inline-block;
           &:hover {
             text-decoration: none;
-            color: @brand-color;
-            background: @color-lightGray;
+            opacity: 0.7;
           }
         }
       }
@@ -187,74 +167,48 @@ header {
   }
 }
 
-.hero {
-  width: 100%;
-  min-width: 1170px;
-  height: 570px;
-  background-color: @brand-color;
-  .inner {
-    width: 600px;
-  }
-  .logo {
-    width: 600px;
-    margin-top: 200px;
-  }
-  .vegosvar {
-    margin-top: 50px;
-    width: 180px;
-  }
-  h1 {
-    color: #eaf4f4 !important;
-    margin-top: -50px;
-    margin-left: 245px;
-    font-size: 22pt;
-    font-weight: 300 !important;
-  }
-  .whitecircle {
-    margin-top: 110px;
-    background: @color-light;
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-  }
-  .circle {
-    display: block;
-    background: @color-mediumBlue;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    text-align: center;
-    color: @color-light;
-    font-size: 20pt;
-    margin-top: -95px;
-    border: #fff solid #fff;
-    &:hover {
-      .transition(all, 0.1s, ease-in);
-      background: lighten(@brand-color, 10%);
-    }
-    .glyphicon {
-      .transition(all, 0.1s, ease-in);
-      margin-top: 28px;
-    }
-  }
+hr {
+  width: 200px;
+  border-top: 2px solid #fff !important;
 }
 
-.fixed-container {
-  width: 1170px;
-  margin: 0 auto;
-  padding: 0 30px;
+.hero {
+  width: 100%;
+  background: @color-lightBlue url(../img/hero.jpg) center;
+  background-size: cover;
+  padding: 230px 0 200px 0;
+  @media only screen and (max-width : 480px) {
+    padding: 170px 0 150px 0;
+  }
+  img {
+    width: 600px;
+    max-width: 100%;
+  }
+  h1 {
+    color: #fff !important;
+    font-size: 20pt;
+    display: inline-block;
+    background: #fff;
+    color: @color-lightBlue !important;
+    padding: 6px 12px;
+    font-weight: 400 !important;
+    @media only screen and (max-width : 480px) {
+      font-size: 16pt;
+    }
+  }
 }
 
 .main {
   margin-top: 100px;
-  .fixed-container {
-    margin-bottom: 100px;
-  }
 
   .bigCircle {
     height: 300px;
     width: 300px;
     border-radius: 50%;
+    @media only screen and (max-width : 480px) {
+      border-radius: 5px;
+      width: 100%;
+    }
     &.yellow {
       background: @color-yellow url(../img/mjolk.png);
       @-webkit-keyframes mjolkAnimation {
@@ -299,12 +253,13 @@ header {
       margin-bottom: 20px;
     }
     .svensk {
-      width: 210px;
+      width: auto;
+      height: 330px;
+      max-width: 100%;
       margin-left: 50px;
       margin-top: -30px;
     }
     .bigCircle {
-      float: left;
       margin-right: 40px;
     }
   }
@@ -316,11 +271,19 @@ header {
     h3 {
       margin-top: 70px;
       margin-bottom: 20px;
+      @media only screen and (max-width : 480px) {
+        margin-top: 30px;
+      }
     }
     .insemination {
       width: 378px;
-      margin-left: -52px;
-      margin-top: 24px;
+      max-width: 100%;
+      margin-top: 110px;
+      @media only screen and (max-width : 480px) {
+        display: block;
+        padding: 60px 30px;
+        margin-top: 0;
+      }
     }
     .pipe1 {
       background: @color-darkRed url(../img/sperma.png);
@@ -335,237 +298,117 @@ header {
     }
     .bigCircle {
       margin-right: 40px;
-      float: left;
+      @media only screen and (max-width : 480px) {
+        height: auto;
+        margin-right: 0;
+      }
     }
   }
 
   .del3 {
     float: left;
-    margin-bottom: 170px;
+    margin-bottom: 100px;
     width: 100%;
     h3 {
       margin-top: 70px;
       margin-bottom: 20px;
+      @media only screen and (max-width : 480px) {
+        margin-top: 30px;
+      }
     }
     .kalvning {
       width: 353px;
-      margin-left: -51px;
-      margin-top: 48px;
-    }
-    .pipe1 {
-      background: @color-mediumGray;
-      position: absolute;
-      margin-top: 285px;
-      margin-left: 218px;
-      width: 30px;
-      height: 100px;
-      z-index: -1;
-    }
-    .pipe2 {
-      background: @color-mediumGray;
-      position: absolute;
-      margin-top: 385px;
-      margin-left: 218px;
-      width: 307px;
-      height: 30px;
-      z-index: -1;
-    }
-    .pipe3 {
-      background: @color-mediumGray;
-      position: absolute;
-      margin-top: 385px;
-      margin-left: 525px;
-      width: 30px;
-      height: 100px;
-      z-index: -1;
+      max-width: 90%;
+      margin-left: 5%;
+      margin-top: 95px;
+      @media only screen and (max-width : 480px) {
+        display: block;
+        padding: 60px 30px;
+        margin-top: 30px;
+      }
     }
     .bigCircle {
       margin-right: 40px;
-      float: left;
+      background: #E8C7D5;
+      @media only screen and (max-width : 480px) {
+        height: auto;
+      }
     }
   }
 
   .del4 {
-    float: left;
-    margin-bottom: 100px;
     width: 100%;
+    background: #3b3032;
+    background-size: cover;
+    padding: 100px 0;
     h3 {
       margin-top: 30px;
       margin-bottom: 20px;
+      color: #fff !important;
+    }
+    p {
+      color: #fff !important;
     }
     .separation {
       width: 650px;
-    }
-    .timmar {
-      display: block;
-      position: absolute;
-      margin-left: 285px;
-      margin-top: 110px;
-      font-size: 55pt !important;
-      line-height: 1.2 !important;
-      font-family: @brand-font !important;
-      font-weight: 300 !important;
-      color: #c1b49a !important;
-      animation: starAnimationOne 5s infinite;
-      -webkit-animation: starAnimationOne 5s infinite;
-    }
-    .star {
-      position: absolute;
-      width: 4px;
-      height: 4px;
-      background: #c1b49a;
-      border-radius: 5px;
-      @-webkit-keyframes starAnimationOne {
-        0% { opacity: 1; }
-        50% { opacity: 0.5; }
-        100% { opacity: 1; }
-      }
-      @-webkit-keyframes starAnimationTwo {
-        0% { opacity: 0.3; }
-        80% { opacity: 1; }
-        100% { opacity: 0.1; }
-      }
-      @-webkit-keyframes starAnimationThree {
-        0% { opacity: 0.3; }
-        10% { opacity: 1; }
-        100% { opacity: 0.3; }
-      }
-      &.pos1 {
-        margin-top: 70px;
-        margin-left: 270px;
-        animation: starAnimationOne 3s infinite;
-        -webkit-animation: starAnimationOne 3s infinite;
-      }
-      &.pos2 {
-        margin-top: 50px;
-        margin-left: 350px;
-        animation: starAnimationTwo 3s infinite;
-        -webkit-animation: starAnimationTwo 3s infinite;
-      }
-      &.pos3 {
-        margin-top: 85px;
-        margin-left: 340px;
-        animation: starAnimationThree 3s infinite;
-        -webkit-animation: starAnimationThree 3s infinite;
-      }
-      &.pos4 {
-        margin-top: 110px;
-        margin-left: 410px;
-        animation: starAnimationTwo 3s infinite;
-        -webkit-animation: starAnimationTwo 3s infinite;
-      }
-    }
-    .pipe1 {
-      background: @color-darkBrown;
-      position: absolute;
-      margin-top: 150px;
-      margin-left: -100px;
-      width: 450px;
-      height: 30px;
-      z-index: -1;
-    }
-    .pipe2 {
-      background: @color-brown;
-      position: absolute;
-      margin-top: 150px;
-      margin-left: 350px;
-      width: 450px;
-      height: 30px;
-      z-index: -1;
-
-    }
-    .pipe3 {
-      background: @color-darkBrown;
-      position: absolute;
-      margin-top: 150px;
-      margin-left: -100px;
-      width: 30px;
-      height: 670px;
-      z-index: -1;
-    }
-    .pipe4 {
-      background: @color-brown;
-      position: absolute;
-      margin-top: 150px;
-      margin-left: 770px;
-      width: 30px;
-      height: 2350px;
-      z-index: -1;
-    }
-    .pipe5 {
-      background: @color-darkBrown;
-      position: absolute;
-      margin-top: 820px;
-      margin-left: -100px;
-      width: 500px;
-      height: 30px;
-      z-index: -1;
+      max-width: 100%;
     }
   }
 
   .del5 {
-    float: left;
-    margin-bottom: 75px;
-    width: 100%;
+    background: #B2B2B2 center;
+    background-size: cover;
+    padding: 100px 0 130px 0;
+    overflow: hidden;
+    @media only screen and (max-width : 480px) {
+      padding: 100px 0;
+    }
     h3 {
       margin-top: 20px;
       margin-bottom: 30px;
     }
     .mjolkning {
-      margin-top: 20px;
-      margin-left: -50px;
-      width: 480px;
-    }
-    .mjolk {
-      background: url(../img/mjolk-liten.png);
-      position: absolute;
-      margin-left: 525px;
-      margin-top: 250px;
-      width: 89px;
-      height: 35px;
-      @-webkit-keyframes mjolkLitenAnimation {
-        from { background-position: 0 0; }
-        to { background-position: -89px 0; }
+      margin-top: 100px;
+      width: 300px;
+      @media only screen and (max-width : 480px) {
+        display: block;
+        padding: 60px 30px;
+        margin-top: 30px;
       }
-      animation: mjolkLitenAnimation 1s infinite;
-      -webkit-animation: mjolkLitenAnimation 1s infinite;
-      -webkit-animation-timing-function: linear;
-    }
-    .mjolkkartong {
-      position: absolute;
-      width: 60px;
-      z-index: -1;
-      margin-top: 200px;
-      margin-left: 200px;
-      @-webkit-keyframes mjolkkartong {
-        0% { margin-top: 230px; margin-left: 200px; }
-        50% { margin-top: 230px; margin-left: 285px; }
-        100% { margin-top: 650px; margin-left: 200px; }
-      }
-      animation: mjolkkartong 1.7s infinite;
-      -webkit-animation: mjolkkartong 1.7s infinite;
-
-    }
-    .pipe1 {
-      background: @color-darkBrown;
-      position: absolute;
-      margin-top: 250px;
-      margin-left: 330px;
-      width: 30px;
-      height: 300px;
-      z-index: -1;
-
     }
     .bigCircle {
       float: none;
       display: inline-block;
+      background: #666 url(../img/mjolk.png);
+      @media only screen and (max-width : 480px) {
+        overflow: hidden;
+      }
+      @-webkit-keyframes mjolkAnimation {
+        from { background-position: 0 0; }
+        to { background-position: -361px 0; }
+      }
+      animation: mjolkAnimation 2s infinite;
+      -webkit-animation: mjolkAnimation 2s infinite;
+      -webkit-animation-timing-function: linear;
     }
   }
 
   .del6 {
-    float: left;
-    margin-bottom: 100px;
-    width: 100%;
+    padding: 100px 0;
+    position: relative;
+    .mjolkkartong {
+      position: absolute;
+      top: -100px;
+      right: 40%;
+      width: 60px;
+      z-index: -1;
+      @-webkit-keyframes mjolkkartong {
+        0% { top: -100px; opacity: 0; }
+        100% { top: 80px; opacity: 1; }
+      }
+      animation: mjolkkartong 1.7s infinite;
+      -webkit-animation: mjolkkartong 1.7s infinite;
+    }
     h3 {
       margin-top: 20px;
       margin-bottom: 20px;
@@ -574,42 +417,8 @@ header {
       margin-top: 0px;
       margin-left: 0px;
       width: 650px;
-    }
-    .pipe1 {
-      background: @color-darkBrown;
-      position: absolute;
-      margin-top: 250px;
-      margin-left: -100px;
-      width: 300px;
-      height: 30px;
-      z-index: -1;
-    }
-    .pipe2 {
-      background: @color-darkBrown;
-      position: absolute;
-      margin-top: 250px;
-      margin-left: -100px;
-      width: 30px;
-      height: 450px;
-      z-index: -1;
-    }
-    .pipe3 {
-      background: @color-darkBrown;
-      position: absolute;
-      margin-top: 700px;
-      margin-left: -100px;
-      width: 150px;
-      height: 30px;
-      z-index: -1;
-    }
-    .pipe4 {
-      background: @color-darkBrown;
-      position: absolute;
-      margin-top: 700px;
-      margin-left: 30px;
-      width: 30px;
-      height: 100px;
-      z-index: -1;
+      max-width: 100%;
+      margin-bottom: 15px;
     }
     .bigCircle {
       float: none;
@@ -619,316 +428,105 @@ header {
 
 
   .del7 {
-    float: left;
-    margin-bottom: 300px;
+    padding: 100px 0;
     width: 100%;
+    background: #e8e8e8;
     h3 {
-      margin-top: 0px;
+      margin-top: 20px;
       margin-bottom: 20px;
+      @media only screen and (max-width : 480px) {
+        margin-top: 30px;
+      }
     }
     .insemination {
       width: 378px;
-      margin-left: -42px;
-      margin-top: 24px;
-    }
-    .pipe1 {
-      background: @color-darkBrown;
-      position: absolute;
-      margin-top: 298px;
-      margin-left: 228px;
-      width: 30px;
-      height: 80px;
-      z-index: -1;
-    }
-    .pipe2 {
-      background: @color-darkBrown;
-      position: absolute;
-      margin-top: 350px;
-      margin-left: 108px;
-      width: 150px;
-      height: 30px;
-      z-index: -1;
-    }
-    .pipe3 {
-      background: @color-darkBrown;
-      position: absolute;
-      margin-top: 350px;
-      margin-left: 100px;
-      width: 30px;
-      height: 900px;
-      z-index: -1;
-    }
-    .pipe4 {
-      background: @color-darkBrown;
-      position: absolute;
-      margin-top: 1250px;
-      margin-left: 100px;
-      width: 100px;
-      height: 30px;
-      z-index: -1;
+      max-width: 100%;
+      margin-top: 110px;
+      @media only screen and (max-width : 480px) {
+        display: block;
+        padding: 60px 30px;
+        margin-top: 0;
+      }
     }
     .bigCircle {
-      margin-right: 40px;
-      float: left;
+      @media only screen and (max-width : 480px) {
+        height: auto;
+      }
     }
   }
 
   .del8 {
-    float: left;
-    margin-bottom: 80px;
+    background: #222;
     width: 100%;
+    padding: 100px 0;
     h3 {
-      margin-top: -100px;
-      margin-bottom: 20px;
+      margin-top: 0;
+      margin-bottom: 0px;
+      color: #fff !important;
+      @media only screen and (max-width : 480px) {
+        margin-top: 30px;
+      }
+    }
+    h4 {
+      margin-top: 30px;
+      color: #fff !important;
+    }
+    p {
+      color: #fff !important;
     }
     .kvigaCircle {
       margin-left: 0px;
-      margin-top: 100px;
       width: 200px;
       height: 200px;
       .kviga {
-        margin-left: 10px;
-        margin-top: 10px;
         width: 200px;
       }
     }
     .tjurCircle {
-      position: absolute;
-      margin-left: 500px;
-      margin-top: 100px;
       width: 200px;
       height: 200px;
       .tjur {
-        margin-left: 10px;
-        margin-top: 10px;
         width: 200px;
       }
     }
-    .pipe1 {
-      background: @color-brown;
-      position: absolute;
-      margin-top: 0px;
-      margin-left: 530px;
-      width: 465px;
-      height: 30px;
-      z-index: -1;
-    }
-    .pipe2 {
-      background: @color-brown;
-      position: absolute;
-      margin-top: 0px;
-      margin-left: 530px;
-      width: 30px;
-      height: 170px;
-      z-index: -1;
-    }
-    .pipe3 {
-      background: @color-brown;
-      position: absolute;
-      margin-top: 150px;
-      margin-left: 250px;
-      width: 500px;
-      height: 30px;
-      z-index: -1;
-    }
-    .pipe4 {
-      background: @color-darkRed url(../img/sperma.png);
-      position: absolute;
-      margin-top: 150px;
-      margin-left: 280px;
-      width: 30px;
-      height: 500px;
-      z-index: -1;
-      -webkit-animation: redAnimation 20s infinite;
-      -webkit-animation-timing-function: linear;
-    }
-    .pipe5 {
-      background: @color-dark;
-      position: absolute;
-      margin-top: 150px;
-      margin-left: 780px;
-      width: 30px;
-      height: 500px;
-      z-index: -1;
-    }
     .bigCircle {
-      margin-right: 40px;
-      float: left;
+      display: inline-block;
     }
-  }
-
-
-  .del9 {
-    float: left;
-    margin-bottom: 30px;
-    width: 100%;
-    h3 {
-      margin-top: -100px;
-      margin-bottom: 20px;
-    }
-    .inseminationCircle {
-      margin-left: -230px;
+    .insemination {
+      max-width: 200px;
       margin-top: 100px;
-      width: 300px;
-      height: 300px;
-      .insemination{
-        margin-left: 10px;
-        margin-top: 60px;
-        width: 260px;
-      }
     }
-    .slaktCircle {
-      position: absolute;
-      margin-left: 265px;
-      margin-top: 100px;
-      width: 300px;
-      height: 300px;
-      .slakt{
-        margin-left: -70px;
-        margin-top: -20px;
-        width: 450px;
-      }
-    }
-    .pipe1 {
-      background: @color-dark;
-      position: absolute;
-      margin-top: 310px;
-      margin-left: 300px;
-      width: 500px;
-      height: 30px;
-      z-index: -1;
-    }
-    .bigCircle {
-      margin-right: 40px;
-      float: left;
-    }
-    .blood {
-      position: absolute;
-      width: 4px;
-      height: 6px;
-      border-radius: 10px;
-      background: @color-darkRed;
-      z-index: 100;
-      &.pos1 {
-        margin-top: 245px;
-        margin-left: 615px;
-        @-webkit-keyframes bloodOne {
-          0% { margin-top: 245px; margin-left: 615px; opacity: 0; }
-          10% { margin-top: 250px; margin-left: 615px; opacity: 1; }
-          80% { margin-top: 257px; margin-left: 615px; opacity: 1; }
-          100% { margin-top: 310px; margin-left: 615px; opacity: 0; }
-        }
-        animation: bloodOne 2.5s infinite;
-        -webkit-animation: bloodOne 2.5s infinite;
-        -webkit-animation-timing-function: linear;
-      }
-      &.pos2 {
-        margin-top: 245px;
-        margin-left: 625px;
-        @-webkit-keyframes bloodTwo {
-          0% { margin-top: 245px; margin-left: 625px; opacity: 0; }
-          20% { margin-top: 250px; margin-left: 625px; opacity: 1; }
-          85% { margin-top: 257px; margin-left: 625px; opacity: 1; }
-          100% { margin-top: 320px; margin-left: 625px; opacity: 0; }
-        }
-        animation: bloodTwo 2.3s infinite;
-        -webkit-animation: bloodTwo 2.3s infinite;
-        -webkit-animation-timing-function: linear;
-      }
-      &.pos3 {
-        margin-top: 245px;
-        margin-left: 620px;
-        @-webkit-keyframes bloodThree {
-          0% { margin-top: 245px; margin-left: 620px; opacity: 0; }
-          20% { margin-top: 250px; margin-left: 620px; opacity: 1; }
-          85% { margin-top: 257px; margin-left: 620px; opacity: 1; }
-          100% { margin-top: 300px; margin-left: 620px; opacity: 0; }
-        }
-        animation: bloodThree 2.0s infinite;
-        -webkit-animation: bloodThree 2.0s infinite;
-        -webkit-animation-timing-function: linear;
-      }
-      &.pos4 {
-        margin-top: 235px;
-        margin-left: 215px;
-        @-webkit-keyframes bloodFour {
-          0% { margin-top: 235px; margin-left: 215px; opacity: 0; }
-          10% { margin-top: 235px; margin-left: 215px; opacity: 1; }
-          80% { margin-top: 240px; margin-left: 215px; opacity: 1; }
-          100% { margin-top: 320px; margin-left: 215px; opacity: 0; }
-        }
-        animation: bloodFour 2.5s infinite;
-        -webkit-animation: bloodFour 2.5s infinite;
-        -webkit-animation-timing-function: linear;
-      }
-      &.pos5 {
-        margin-top: 235px;
-        margin-left: 225px;
-        @-webkit-keyframes bloodFive {
-          0% { margin-top: 235px; margin-left: 225px; opacity: 0; }
-          20% { margin-top: 235px; margin-left: 225px; opacity: 1; }
-          85% { margin-top: 240px; margin-left: 225px; opacity: 1; }
-          100% { margin-top: 300px; margin-left: 225px; opacity: 0; }
-        }
-        animation: bloodFive 2.3s infinite;
-        -webkit-animation: bloodFive 2.3s infinite;
-        -webkit-animation-timing-function: linear;
-      }
-      &.pos6 {
-        margin-top: 235px;
-        margin-left: 220px;
-        @-webkit-keyframes bloodSix {
-          0% { margin-top: 235px; margin-left: 220px; opacity: 0; }
-          20% { margin-top: 235px; margin-left: 220px; opacity: 1; }
-          85% { margin-top: 240px; margin-left: 220px; opacity: 1; }
-          100% { margin-top: 310px; margin-left: 220px; opacity: 0; }
-        }
-        animation: bloodSix 2.0s infinite;
-        -webkit-animation: bloodSix 2.0s infinite;
-        -webkit-animation-timing-function: linear;
-      }
-    }
-  }
-
-  .del10 {
-    float: left;
-    margin-bottom: 240px;
-    width: 100%;
-    h3 {
-      margin-top: 0px;
-      margin-bottom: 20px;
+    .slakt {
+      width: 80%;
+      height: auto;
     }
   }
 
 
   .del11 {
-    float: left;
-    margin-bottom: 100px;
+    margin-top: 150px;
+    padding: 100px 0;
     width: 100%;
     h3 {
-      margin-top: 0px;
+      margin-top: 15px;
       margin-bottom: 20px;
+      display: inline-block;
+      line-height: 1.6;
     }
     .stats {
       position: relative;
       height: 150px;
-      .statsContent {
-        position: absolute;
+      .relativeContainer {
+        position: relative;
         height: 150px;
-        margin-left: 230px;
+      }
+      .statContainer {
+        height: 150px;
         margin-bottom: 30px;
         bottom: 0;
-        @-webkit-keyframes lifeStats {
-          0% { height: 150px; }
-          50% { height: 140px; }
-          100% { height: 150px; }
-        }
-        animation: lifeStats 2.0s infinite;
-        -webkit-animation: lifeStats 2.0s infinite;
         .tjurStats {
           position: absolute;
-          margin-left: 30px;
-          width: 30px;
+          width: 100%;
           height: 15%;
           background: #000;
           bottom: 0;
@@ -936,8 +534,7 @@ header {
         }
         .kossaStats {
           position: absolute;
-          margin-left: 90px;
-          width: 30px;
+          width: 100%;
           height: 50%;
           background: @color-darkRed url(../img/sperma.png);
           -webkit-animation: redAnimation 20s infinite;
@@ -947,8 +544,7 @@ header {
         }
         .naturligStats {
           position: absolute;
-          margin-left: 150px;
-          width: 30px;
+          width: 100%;
           height: 200%;
           background: @color-lightBlue;
           bottom: 0;
@@ -959,47 +555,39 @@ header {
   }
 
   .del12 {
-    background: #f6f6f6;
-    padding: 100px 0;
+    background: #F3F3F3 center;
+    background-position: cover;
+    padding: 80px 0 120px 0;
     width: 100%;
-    min-width: 1170px;
     float: left;
     h3 {
       margin-bottom: 20px;
       font-weight: 700 !important;
     }
-
     h4 {
-      margin-bottom: 80px;
-      color: @color-lightBlue !important;
+      margin-bottom: 15px;
+      color: #000 !important;
       &.citat{
         color: #555 !important;
         margin-bottom: 20px;
       }
     }
     .mjolker {
-      margin-bottom: 110px;
+      margin-top: 40px;
       .bigCircle {
+        position: relative;
         display: inline;
-        box-shadow: 50px 60px 40px #bdbdbd;
-        @-webkit-keyframes mjolkShadow {
-          0% { box-shadow: 50px 40px 40px #bdbdbd; }
-          50% { box-shadow: 3px 40px 40px #bdbdbd; }
-          100% { box-shadow: 50px 40px 40px #bdbdbd; }
+        @-webkit-keyframes smjolkAnimation {
+          0% { transform: scale(1); }
+          50% { transform: scale(1.03); }
+          100% { transform: scale(1); }
         }
-        animation: mjolkShadow 4.0s infinite;
-        -webkit-animation: mjolkShadow 4.0s infinite;
+        animation: smjolkAnimation 2.0s infinite;
+        -webkit-animation: smjolkAnimation 2.0s infinite;
         img {
-          width: 90px;
-          margin-left: 20px;
-          margin-right: 20px;
-        }
-        span {
-			position: absolute;
-			margin-top: 135px;
-			margin-left: -116px;
-			color: #999;
-			width: 95px;
+          width: 400px;
+          max-width: 100%;
+          margin-bottom: 15px;
         }
       }
     }
@@ -1009,10 +597,10 @@ header {
 
 footer {
   color: @color-light !important;
-  background: @brand-color;
-  padding-top: 80px;
+  background: @color-lightBlue url(../img/hero.jpg) center;
+  background-size: cover;
+  padding: 100px 0 0 0;
   width: 100%;
-  min-width: 1170px;
   float: left;
   h3 {
     margin-bottom: 20px;
@@ -1020,8 +608,12 @@ footer {
     font-weight: 700 !important;
   }
   h4 {
-    margin-bottom: 30px;
     color: @color-light !important;
+    margin-top: 0; 
+    margin-bottom: 50px;
+    a, a:hover {
+      color: #fff;
+    }
   }
   .share {
     display: inline-block;
@@ -1036,127 +628,28 @@ footer {
       background: #e5f9ff;
     }
   }
-  .vote {
-    background: #fff;
-    padding: 50px;
-    width: 100%;
-    margin-bottom: 80px;
+  img {
+    width: 400px; 
+    max-width: 100%; 
     border-radius: 10px;
-    h3 {
-      margin-top: 0;
-      color: #b3b3b3 !important;
-      font-weight: 300 !important;
-    }
-    h4 {
-      color: @color-lightBlue !important;
-    }
-    #nej, #ja, #kanske {
-      display: inline-block;
-      padding: 10px 25px;
-      border: 1px solid @color-lightBlue;
-      border-radius: 5px;
-      color: @color-lightBlue;
-      font-size: 16pt;
-      margin: 0px 5px 30px 5px;
-      .transition(all, 0.1s, ease-in);
-      cursor: pointer;
-      &:hover{
-        text-decoration: none;
-        background: @color-lightBlue;
-        color: #fff;
-      }
-    }
-    .toggleVotes h3 {
-      margin-top: 20px;
-    }
-    .results {
-      width: 300px;
-      margin-left: auto;
-      margin-right: auto;
-      height: 280px;
-      border-radius: 5px;
-      padding-top: 30px;
-      .stats {
-        position: absolute;
-        height: 200px;
-        .yes {
-          position: absolute;
-          bottom: 0;
-          width: 60px;
-          background: #24b337;
-          border-radius: 3px;
-          .procent {
-            color: #24b337;
-          }
-        }
-        .maybe {
-          position: absolute;
-          bottom: 0;
-          width: 60px;
-          background: #eab71f;
-          border-radius: 3px;
-          .procent {
-            color: #eab71f;
-          }
-        }
-        .no {
-          position: absolute;
-          bottom: 0;
-          width: 60px;
-          background: @color-darkRed;
-          border-radius: 3px;
-          .procent {
-            color: @color-darkRed;
-          }
-        }
-        .procent{
-          position: absolute;
-          display: block;
-          top: -30px;
-          width: 100%;
-          text-align: center;
-          font-weight: bold;
-          border-radius: 3px;
-          font-size: 14pt;
-        }
-        .holder{
-          float: left;
-          width: 60px;
-          height: 200px;
-          margin: 0px 20px;
-          border-radius: 3px;
-        }
-        .alternativ{
-          position: absolute;
-          display: block;
-          bottom: -25px;
-          width: 100%;
-          text-align: center;
-          color: #848484;
-        }
-      }
-    }
-    .info{
-      line-height: 1.2 !important; 
-      color: #999 !important;
-    }
   }
   .sources {
-    color: darken(@color-lightBlue, 20%) !important;
+    color: #fff !important;
     font-size: 9pt;
     margin-bottom: 10px;
-    a{
-      color: darken(@color-lightBlue, 20%);
+    margin-top: 30px;
+    a {
+      color: #fff;
       display: inline-block;
-      background: lighten(@color-lightBlue, 3%);
+      border: 1px solid #fff;
       padding: 3px 8px;
       margin-left: 5px;
       border-radius: 10px;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
       .transition(background, 0.1s, ease-in);
       &:hover {
         text-decoration: none;
-        background: lighten(@color-lightBlue, 10%);
+        background: darken(@color-lightBlue, 10%);
       }
     }
   }
@@ -1167,24 +660,20 @@ footer {
     margin-bottom: 15px;
     a {
       color: @color-light;
-      &:hover {
-        text-decoration: none;
-        opacity: 0.8;
-      }
     }
   }
   .links {
-    height: 50px;
     width: 100%;
-    padding: 15px;
+    margin-top: 30px;
+    padding: 45px 15px 30px 15px;
     background: @color-darkBlue;
     color: @brand-color !important;
     a {
-      color: @brand-color !important;
+      color: #fff !important;
     }
 
     p {
-      color: @brand-color !important;
+      color: #fff !important;
     }
 
     ul {
