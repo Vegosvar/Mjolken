@@ -46,7 +46,6 @@ body {
 
 h1 {
   line-height: 1.1 !important;
-  font-weight: 700 !important;
   font-family: @brand-font !important;
   font-weight: 400 !important;
   color: @color-dark !important;
@@ -54,7 +53,6 @@ h1 {
 
 h2 {
   line-height: 1.2 !important;
-  font-weight: 700 !important;
   font-family: @brand-font !important;
   font-weight: 300 !important;
   color: @color-dark !important;
@@ -62,7 +60,6 @@ h2 {
 
 h3 {
   font-size: 24pt !important;
-  font-weight: 400 !important;
   line-height: 1.2 !important;
   font-family: @brand-font !important;
   font-weight: 300 !important;
@@ -268,11 +265,19 @@ hr {
     h3 {
       margin-top: 70px;
       margin-bottom: 20px;
+      @media only screen and (max-width : 480px) {
+        margin-top: 30px;
+      }
     }
     .insemination {
       width: 378px;
       max-width: 100%;
       margin-top: 110px;
+      @media only screen and (max-width : 480px) {
+        display: block;
+        padding: 60px 30px;
+        margin-top: 0;
+      }
     }
     .pipe1 {
       background: @color-darkRed url(../img/sperma.png);
@@ -287,6 +292,10 @@ hr {
     }
     .bigCircle {
       margin-right: 40px;
+      @media only screen and (max-width : 480px) {
+        height: auto;
+        margin-right: 0;
+      }
     }
   }
 
@@ -298,7 +307,7 @@ hr {
       margin-top: 70px;
       margin-bottom: 20px;
       @media only screen and (max-width : 480px) {
-        margin-top: 80px;
+        margin-top: 30px;
       }
     }
     .kalvning {
@@ -306,10 +315,18 @@ hr {
       max-width: 90%;
       margin-left: 5%;
       margin-top: 95px;
+      @media only screen and (max-width : 480px) {
+        display: block;
+        padding: 60px 30px;
+        margin-top: 30px;
+      }
     }
     .bigCircle {
       margin-right: 40px;
       background: #E8C7D5;
+      @media only screen and (max-width : 480px) {
+        height: auto;
+      }
     }
   }
 
@@ -337,6 +354,9 @@ hr {
     background-size: cover;
     padding: 100px 0 130px 0;
     overflow: hidden;
+    @media only screen and (max-width : 480px) {
+      padding: 100px 0;
+    }
     h3 {
       margin-top: 20px;
       margin-bottom: 30px;
@@ -344,11 +364,19 @@ hr {
     .mjolkning {
       margin-top: 100px;
       width: 300px;
+      @media only screen and (max-width : 480px) {
+        display: block;
+        padding: 60px 30px;
+        margin-top: 30px;
+      }
     }
     .bigCircle {
       float: none;
       display: inline-block;
       background: #666 url(../img/mjolk.png);
+      @media only screen and (max-width : 480px) {
+        overflow: hidden;
+      }
       @-webkit-keyframes mjolkAnimation {
         from { background-position: 0 0; }
         to { background-position: -361px 0; }
@@ -401,13 +429,23 @@ hr {
       margin-top: 20px;
       margin-bottom: 20px;
       @media only screen and (max-width : 480px) {
-        margin-top: 70px;
+        margin-top: 30px;
       }
     }
     .insemination {
       width: 378px;
       max-width: 100%;
       margin-top: 110px;
+      @media only screen and (max-width : 480px) {
+        display: block;
+        padding: 60px 30px;
+        margin-top: 0;
+      }
+    }
+    .bigCircle {
+      @media only screen and (max-width : 480px) {
+        height: auto;
+      }
     }
   }
 

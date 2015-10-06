@@ -13,21 +13,18 @@ body {
 }
 h1 {
   line-height: 1.1 !important;
-  font-weight: 700 !important;
   font-family: 'Open Sans' !important;
   font-weight: 400 !important;
   color: #1b1b1b !important;
 }
 h2 {
   line-height: 1.2 !important;
-  font-weight: 700 !important;
   font-family: 'Open Sans' !important;
   font-weight: 300 !important;
   color: #1b1b1b !important;
 }
 h3 {
   font-size: 24pt !important;
-  font-weight: 400 !important;
   line-height: 1.2 !important;
   font-family: 'Open Sans' !important;
   font-weight: 300 !important;
@@ -218,10 +215,22 @@ hr {
   margin-top: 70px;
   margin-bottom: 20px;
 }
+@media only screen and (max-width: 480px) {
+  .main .del2 h3 {
+    margin-top: 30px;
+  }
+}
 .main .del2 .insemination {
   width: 378px;
   max-width: 100%;
   margin-top: 110px;
+}
+@media only screen and (max-width: 480px) {
+  .main .del2 .insemination {
+    display: block;
+    padding: 60px 30px;
+    margin-top: 0;
+  }
 }
 .main .del2 .pipe1 {
   background: #ad2527 url(../img/sperma.png);
@@ -237,6 +246,12 @@ hr {
 .main .del2 .bigCircle {
   margin-right: 40px;
 }
+@media only screen and (max-width: 480px) {
+  .main .del2 .bigCircle {
+    height: auto;
+    margin-right: 0;
+  }
+}
 .main .del3 {
   float: left;
   margin-bottom: 100px;
@@ -248,7 +263,7 @@ hr {
 }
 @media only screen and (max-width: 480px) {
   .main .del3 h3 {
-    margin-top: 80px;
+    margin-top: 30px;
   }
 }
 .main .del3 .kalvning {
@@ -257,9 +272,21 @@ hr {
   margin-left: 5%;
   margin-top: 95px;
 }
+@media only screen and (max-width: 480px) {
+  .main .del3 .kalvning {
+    display: block;
+    padding: 60px 30px;
+    margin-top: 30px;
+  }
+}
 .main .del3 .bigCircle {
   margin-right: 40px;
   background: #E8C7D5;
+}
+@media only screen and (max-width: 480px) {
+  .main .del3 .bigCircle {
+    height: auto;
+  }
 }
 .main .del4 {
   width: 100%;
@@ -285,6 +312,11 @@ hr {
   padding: 100px 0 130px 0;
   overflow: hidden;
 }
+@media only screen and (max-width: 480px) {
+  .main .del5 {
+    padding: 100px 0;
+  }
+}
 .main .del5 h3 {
   margin-top: 20px;
   margin-bottom: 30px;
@@ -293,6 +325,13 @@ hr {
   margin-top: 100px;
   width: 300px;
 }
+@media only screen and (max-width: 480px) {
+  .main .del5 .mjolkning {
+    display: block;
+    padding: 60px 30px;
+    margin-top: 30px;
+  }
+}
 .main .del5 .bigCircle {
   float: none;
   display: inline-block;
@@ -300,6 +339,11 @@ hr {
   animation: mjolkAnimation 2s infinite;
   -webkit-animation: mjolkAnimation 2s infinite;
   -webkit-animation-timing-function: linear;
+}
+@media only screen and (max-width: 480px) {
+  .main .del5 .bigCircle {
+    overflow: hidden;
+  }
 }
 @-webkit-keyframes mjolkAnimation {
   from {
@@ -358,13 +402,25 @@ hr {
 }
 @media only screen and (max-width: 480px) {
   .main .del7 h3 {
-    margin-top: 70px;
+    margin-top: 30px;
   }
 }
 .main .del7 .insemination {
   width: 378px;
   max-width: 100%;
   margin-top: 110px;
+}
+@media only screen and (max-width: 480px) {
+  .main .del7 .insemination {
+    display: block;
+    padding: 60px 30px;
+    margin-top: 0;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .main .del7 .bigCircle {
+    height: auto;
+  }
 }
 .main .del8 {
   background: #222;
